@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddqqoee1muy2k"]
+
+[ext_resource type="Script" path="res://GraphNode.gd" id="1_hmbdv"]
+[ext_resource type="PackedScene" uid="uid://dlwq4kmdb3bhs" path="res://addons/easy_charts/control_charts/chart.tscn" id="2_c3x73"]
+
+[node name="Scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_offset = Vector2(-31, 0)
+
+[node name="GraphNode" type="GraphNode" parent="GraphEdit"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 133.0
+offset_right = 604.0
+offset_bottom = 518.0
+mouse_filter = 1
+position_offset = Vector2(69, 133)
+resizable = true
+title = "Plot"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+script = ExtResource("1_hmbdv")
+
+[node name="Chart" parent="GraphEdit/GraphNode" instance=ExtResource("2_c3x73")]
+layout_mode = 2
