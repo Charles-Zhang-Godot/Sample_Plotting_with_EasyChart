@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://templates/line_chart_template/line_chart.gd" id="1_50xhi"]
 [ext_resource type="PackedScene" uid="uid://dlwq4kmdb3bhs" path="res://addons/easy_charts/control_charts/chart.tscn" id="2_k6l7e"]
 
-[node name="Control2" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
